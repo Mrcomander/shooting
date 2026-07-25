@@ -177,8 +177,7 @@
         167,
         168,
         169,
-        170,
-        171
+        170
       ],
       "DebugActionIndex": 0
     },
@@ -187,8 +186,8 @@
       "DisplayName": "Writing Unity.Multiplayer.Center.Common.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
       "PayloadOffset": 116,
-      "PayloadLength": 66,
-      "PayloadDebugContentSnippet": "C:\\Users\\nisit\\OneDrive\\ドキ",
+      "PayloadLength": 49,
+      "PayloadDebugContentSnippet": "C:\\Users\\akkgi\\Desktop\\dokomi_",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -204,8 +203,8 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.rsp",
       "DisplayName": "Writing Unity.Multiplayer.Center.Common.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 284,
-      "PayloadLength": 38184,
+      "PayloadOffset": 267,
+      "PayloadLength": 38060,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "InputFlags": [],
@@ -222,9 +221,9 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.rsp2",
       "DisplayName": "Writing Unity.Multiplayer.Center.Common.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 38571,
-      "PayloadLength": 79,
-      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\nisit\\OneDr",
+      "PayloadOffset": 38430,
+      "PayloadLength": 62,
+      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\akkgi\\Deskt",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -500,7 +499,6 @@
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll",
-        "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "Library/PackageCache/com.unity.multiplayer.center@f01f4ba8d00a/Common/AnswerData.cs",
         "Library/PackageCache/com.unity.multiplayer.center@f01f4ba8d00a/Common/IOnboardingSection.cs",
@@ -514,7 +512,6 @@
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.rsp"
       ],
       "InputFlags": [
-        0,
         0,
         0,
         0,
@@ -800,7 +797,7 @@
         1,
         2,
         3,
-        146
+        145
       ],
       "ToUseDependencies": [
         1,
@@ -985,18 +982,17 @@
         141,
         142,
         143,
-        144,
+        150,
         151,
         152,
         153,
-        154,
-        161,
+        160,
+        163,
         164,
         165,
         166,
         167,
-        168,
-        169
+        168
       ],
       "DebugActionIndex": 6
     },
@@ -3993,28 +3989,6 @@
       "DebugActionIndex": 142
     },
     {
-      "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_AF3926F9AEA6140F.mvfrm",
-      "DisplayName": "Checking for moved APIs",
-      "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/Compilation/ApiUpdater/ApiUpdater.MovedFromExtractor.dll\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEditor.WebGL.Extensions.dll_AF3926F9AEA6140F.mvfrm\" \"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\UnityEditor.WebGL.Extensions.dll\"",
-      "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
-        "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/Compilation/ApiUpdater/ApiUpdater.MovedFromExtractor.dll"
-      ],
-      "InputFlags": [
-        0,
-        0
-      ],
-      "Outputs": [
-        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_AF3926F9AEA6140F.mvfrm"
-      ],
-      "OutputFlags": [
-        0
-      ],
-      "AllowUnexpectedOutput": true,
-      "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 143
-    },
-    {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_7042F6622A22957F.mvfrm",
       "DisplayName": "Checking for moved APIs",
       "Action": "\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/Compilation/ApiUpdater/ApiUpdater.MovedFromExtractor.dll\" \"Library\\Bee\\artifacts\\mvdfrm\\UnityEditor.WindowsStandalone.Extensions.dll_7042F6622A22957F.mvfrm\" \"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\UnityEditor.WindowsStandalone.Extensions.dll\"",
@@ -4034,14 +4008,14 @@
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 144
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Multiplayer.Center.Common.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 38762,
-      "PayloadLength": 12064,
+      "PayloadOffset": 38604,
+      "PayloadLength": 11978,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "InputFlags": [],
@@ -4052,7 +4026,7 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 145
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.dll.mvfrm",
@@ -4196,13 +4170,11 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_CA292EF3C3FE71C5.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_46E18A1F130992E7.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.dll_0F9C2C30160BD779.mvfrm",
-        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_AF3926F9AEA6140F.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_7042F6622A22957F.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/Compilation/ApiUpdater/ApiUpdater.MovedFromExtractor.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Common.dll.mvfrm.rsp"
       ],
       "InputFlags": [
-        0,
         0,
         0,
         0,
@@ -4489,20 +4461,19 @@
         141,
         142,
         143,
-        144,
-        145
+        144
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 146
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.UnityAdditionalFile.txt",
       "DisplayName": "Writing Unity.Multiplayer.Center.Editor.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 50948,
-      "PayloadLength": 66,
-      "PayloadDebugContentSnippet": "C:\\Users\\nisit\\OneDrive\\ドキ",
+      "PayloadOffset": 50704,
+      "PayloadLength": 49,
+      "PayloadDebugContentSnippet": "C:\\Users\\akkgi\\Desktop\\dokomi_",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -4512,14 +4483,14 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 147
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.rsp",
       "DisplayName": "Writing Unity.Multiplayer.Center.Editor.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 51116,
-      "PayloadLength": 43516,
+      "PayloadOffset": 50855,
+      "PayloadLength": 43392,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "InputFlags": [],
@@ -4530,15 +4501,15 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 148
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.rsp2",
       "DisplayName": "Writing Unity.Multiplayer.Center.Editor.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 94735,
-      "PayloadLength": 79,
-      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\nisit\\OneDr",
+      "PayloadOffset": 94350,
+      "PayloadLength": 62,
+      "PayloadDebugContentSnippet": "/pathmap:\"C:\\Users\\akkgi\\Deskt",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -4548,7 +4519,7 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 149
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.dll (+2 others)",
@@ -4695,7 +4666,6 @@
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll",
-        "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/Microsoft.Win32.Primitives.dll",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/Facades/System.AppContext.dll",
@@ -5179,7 +5149,6 @@
         0,
         0,
         0,
-        0,
         8
       ],
       "Outputs": [
@@ -5194,14 +5163,14 @@
       ],
       "ToBuildDependencies": [
         4,
+        146,
         147,
         148,
-        149,
-        156
+        155
       ],
       "ToUseDependencies": [
-        147,
-        149
+        146,
+        148
       ],
       "AllowUnexpectedOutput": true,
       "Env": [
@@ -5212,7 +5181,7 @@
       ],
       "CachingMode": "ByDirectInputs",
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 150
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Multiplayer.Center.Common.ref.dll_EE36537354EA42C8.mvfrm",
@@ -5237,7 +5206,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 151
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AMDModule.dll_F7A572AD83419D0F.mvfrm",
@@ -5259,7 +5228,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 152
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.HierarchyModule.dll_2B5E1E33201BB86C.mvfrm",
@@ -5281,7 +5250,7 @@
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 153
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.NVIDIAModule.dll_88DEA5441E4B6B48.mvfrm",
@@ -5303,14 +5272,14 @@
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 154
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.dll.mvfrm.rsp",
       "DisplayName": "Writing Unity.Multiplayer.Center.Editor.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 94926,
-      "PayloadLength": 12403,
+      "PayloadOffset": 94524,
+      "PayloadLength": 12317,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "InputFlags": [],
@@ -5321,7 +5290,7 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 155
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.dll.mvfrm",
@@ -5469,13 +5438,11 @@
         "Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_CA292EF3C3FE71C5.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_46E18A1F130992E7.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEngine.dll_0F9C2C30160BD779.mvfrm",
-        "Library/Bee/artifacts/mvdfrm/UnityEditor.WebGL.Extensions.dll_AF3926F9AEA6140F.mvfrm",
         "Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_7042F6622A22957F.mvfrm",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/Compilation/ApiUpdater/ApiUpdater.MovedFromExtractor.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.dll.mvfrm.rsp"
       ],
       "InputFlags": [
-        0,
         0,
         0,
         0,
@@ -5766,24 +5733,23 @@
         141,
         142,
         143,
-        144,
+        150,
         151,
         152,
         153,
-        154,
-        155
+        154
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 156
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt",
       "DisplayName": "Writing Assembly-CSharp.UnityAdditionalFile.txt",
       "ActionType": "WriteFile",
-      "PayloadOffset": 107435,
-      "PayloadLength": 66,
-      "PayloadDebugContentSnippet": "C:\\Users\\nisit\\OneDrive\\ドキ",
+      "PayloadOffset": 106947,
+      "PayloadLength": 49,
+      "PayloadDebugContentSnippet": "C:\\Users\\akkgi\\Desktop\\dokomi_",
       "Inputs": [],
       "InputFlags": [],
       "Outputs": [
@@ -5793,13 +5759,13 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 157
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 107587,
+      "PayloadOffset": 107082,
       "PayloadLength": 37393,
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
@@ -5811,13 +5777,13 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 158
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
-      "PayloadOffset": 145067,
+      "PayloadOffset": 144562,
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -5829,7 +5795,7 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 159
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)",
@@ -6381,15 +6347,15 @@
       ],
       "ToBuildDependencies": [
         4,
-        150,
+        149,
+        156,
         157,
         158,
-        159,
-        163
+        162
       ],
       "ToUseDependencies": [
-        157,
-        159
+        156,
+        158
       ],
       "AllowUnexpectedOutput": true,
       "Env": [
@@ -6399,7 +6365,7 @@
         }
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 160
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Multiplayer.Center.Editor.ref.dll_EB1F4B6E56116D4A.mvfrm",
@@ -6420,17 +6386,17 @@
         0
       ],
       "ToBuildDependencies": [
-        150
+        149
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 161
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 145163,
+      "PayloadOffset": 144658,
       "PayloadLength": 11990,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
@@ -6442,7 +6408,7 @@
         2
       ],
       "RunBeforeDependentNodeLeafInputIsCalculated": true,
-      "DebugActionIndex": 162
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm",
@@ -6875,13 +6841,13 @@
         140,
         141,
         142,
-        151,
-        161,
-        162
+        150,
+        160,
+        161
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 163
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Multiplayer.Center.Common.dll",
@@ -6902,7 +6868,7 @@
       "ToBuildDependencies": [
         4
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Multiplayer.Center.Common.pdb",
@@ -6923,7 +6889,7 @@
       "ToBuildDependencies": [
         4
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.dll",
@@ -6942,9 +6908,9 @@
         2
       ],
       "ToBuildDependencies": [
-        150
+        149
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.pdb",
@@ -6963,9 +6929,9 @@
         2
       ],
       "ToBuildDependencies": [
-        150
+        149
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll",
@@ -6984,9 +6950,9 @@
         2
       ],
       "ToBuildDependencies": [
-        160
+        159
       ],
-      "DebugActionIndex": 168
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb",
@@ -7005,14 +6971,14 @@
         2
       ],
       "ToBuildDependencies": [
-        160
+        159
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "BuildPlayerDataGenerator Library/BuildPlayerData/Editor/TypeDb-All.json",
       "DisplayName": "Extracting script serialization layouts",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\nisit\\OneDrive\\ドキュメント\\shooting\\dokomiterunoyo\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\nisit\\OneDrive\\ドキュメント\\shooting\\dokomiterunoyo\\Library\\ScriptAssemblies\\Unity.Multiplayer.Center.Common.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\EditorExtensions\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\nisit\\OneDrive\\ドキュメント\\shooting\\dokomiterunoyo\\Library\\ScriptAssemblies\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data\\netcorerun\\netcorerun.exe\" \"C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe\" -a=\"C:\\Users\\akkgi\\Desktop\\dokomi_main\\dokomiterunoyo\\Library\\ScriptAssemblies\\Assembly-CSharp.dll\" -a=\"C:\\Users\\akkgi\\Desktop\\dokomi_main\\dokomiterunoyo\\Library\\ScriptAssemblies\\Unity.Multiplayer.Center.Common.dll\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\Managed\\UnityEngine\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netfx\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\compat\\2.1.0\\shims\\netstandard\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\EditorExtensions\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\Extensions\\2.0.0\" -s=\"C:\\Program Files\\Unity\\Hub\\Editor\\6000.4.7f1\\Editor\\Data\\NetStandard\\ref\\2.1.0\" -s=\"C:\\Users\\akkgi\\Desktop\\dokomi_main\\dokomiterunoyo\\Library\\ScriptAssemblies\" -o=\"Library/BuildPlayerData/Editor\" -rn=\"\" -tn=\"TypeDb-All.json\"",
       "Inputs": [
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/netcorerun/netcorerun.exe",
         "C:/Program Files/Unity/Hub/Editor/6000.4.7f1/Editor/Data/Tools/BuildPipeline/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
@@ -7032,12 +6998,12 @@
         0
       ],
       "ToBuildDependencies": [
-        164,
-        168
+        163,
+        167
       ],
       "AllowUnexpectedOutput": true,
       "RunBeforeDependentNodeLeafInputIsCalculated": false,
-      "DebugActionIndex": 170
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "ScriptAssembliesAndTypeDB",
@@ -7048,9 +7014,9 @@
       "OutputFlags": [],
       "ToBuildDependencies": [
         6,
-        170
+        169
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 170
     }
   ],
   "FileSignatures": [
@@ -7209,7 +7175,7 @@
         "NamedNodes": {
           "all_tundra_nodes": 0,
           "ScriptAssemblies": 6,
-          "ScriptAssembliesAndTypeDB": 171
+          "ScriptAssembliesAndTypeDB": 170
         }
 ,  "DefaultNodes": [
     0
@@ -7217,6 +7183,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/1900b0aE.dag.json",
-  "PayloadsFile": "C:/Users/nisit/OneDrive/ドキュメント/shooting/dokomiterunoyo/Library/Bee/1900b0aE.dag.payloads",
+  "PayloadsFile": "C:/Users/akkgi/Desktop/dokomi_main/dokomiterunoyo/Library/Bee/1900b0aE.dag.payloads",
   "RelativePathToRoot": "../.."
 }

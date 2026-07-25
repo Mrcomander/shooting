@@ -3,18 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class MoveScene : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("シーン移動設定")]
+    [SerializeField] private KeyCode moveKey = KeyCode.LeftShift;
+    [SerializeField] private string moveScene = "GameScene";
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKeyDown(moveKey))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene(moveScene);
         }
     }
 }
