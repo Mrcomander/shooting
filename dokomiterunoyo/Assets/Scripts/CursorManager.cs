@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 public class UICursorFollower : MonoBehaviour
 {
     private RectTransform rectTransform;
+    private Canvas parentCanvas;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        // 親の Canvas コンポーネントを取得
+        parentCanvas = GetComponentInParent<Canvas>();
     }
 
     private void OnEnable()
@@ -18,15 +21,22 @@ public class UICursorFollower : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current == null) return;
+        if (Mouse.current == null || parentCanvas == null) return;
 
-        Vector2 mousePos = Mouse.current.position.ReadValue();
+        // New Input System からマウスのスクリーン座標を取得
+        Vector2 screenPos = Mouse.current.position.ReadValue();
 
-        // 強制的にスクリーン座標をワールド座標（UI座標）に変換して適用
-        transform.position = new Vector3(mousePos.x, mousePos.y, 0f);
-
-        // デバッグ用：座標変更を強制的にログ出力
-        Debug.Log($"UIカーソル移動成功: {transform.position}");
+        // スクリーン座標を Canvas のローカル座標系に変換
+        RectTransform canvasRect = parentCanvas.transform as RectTransform;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvasRect,
+                screenPos,
+                parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : parentCanvas.worldCamera,
+                out Vector2 localPos))
+        {
+            // 変換後の座標を anchoredPosition に代入（ScaleWithScreenSize等の影響を打ち消す）
+            rectTransform.anchoredPosition = localPos;
+        }
     }
 
     private void OnDisable()
