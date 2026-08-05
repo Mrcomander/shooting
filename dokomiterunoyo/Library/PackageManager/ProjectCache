@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639209120658213454
-    m_Hash: 3852518248
+      ticks: 639215300668355761
+    m_Hash: 3428733707
   m_LockFileStatus:
     m_FilePath: C:/Users/yuyak/Documents/MyGit/text/dokomiterunoyo/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639209120658265543
-    m_Hash: 1115700428
+      ticks: 639215300668365836
+    m_Hash: 3907776676
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
