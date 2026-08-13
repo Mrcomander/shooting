@@ -6,7 +6,7 @@ public class DialogueController : MonoBehaviour
     public DialogueSelector selector;
 
     //セリフ表示のプログラム
-    public DiclogueUI dialogueUI;
+    public DialogueUI dialogueUI;
 
     public void StartDialogue()
     {
