@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &163584991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163584993}
+  - component: {fileID: 163584992}
+  m_Layer: 0
+  m_Name: OverlapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &163584992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163584991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633e0abfab73700469a4a3d80325d6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OverlapTimer
+  target: {fileID: 420558228}
+  requiredTime: 2
+--- !u!4 &163584993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163584991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 564, y: 289, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186357883
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +308,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420558228 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3659528030466325038, guid: 1b49c7e3661d03f49a0b7dc23197e5b7, type: 3}
+  m_PrefabInstance: {fileID: 2696918664943036488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f070b5410f003447a7c408390c46e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OverlapTarget
 --- !u!1 &497572600
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf81df9aee24ed141a5e6cef98fdd18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  timer: {fileID: 0}
   MainLoveMeter: 1000
   MainHp: 100
 --- !u!4 &1433025030
@@ -921,3 +979,4 @@ SceneRoots:
   - {fileID: 2012518527}
   - {fileID: 1433025030}
   - {fileID: 2696918664943036488}
+  - {fileID: 163584993}
