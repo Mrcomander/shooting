@@ -35,5 +35,8 @@ public class DialogueSelector : MonoBehaviour
         {
             return GetDialogueByID("Shiki_001");
         }
+
+        //条件以外では何も返さない
+        return null;
     }
 }

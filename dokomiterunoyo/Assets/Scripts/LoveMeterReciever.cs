@@ -6,5 +6,8 @@ public class LoveMeterReciever : MonoBehaviour
     public GameManager gameManager;
 
     //ゲームマネージャーから現在の好感度値を取得
-        int Love = gameManager.LoveMeter;
+    public int Love
+    {
+        get { return gameManager.MainLoveMeter; }
+    }
 }
