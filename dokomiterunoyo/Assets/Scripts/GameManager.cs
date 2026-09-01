@@ -1,23 +1,34 @@
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private OverlapTimer timer;
     [SerializeField] public int MainLoveMeter = 1000;
 
-    public bool TestOverlap{get; private set;}
-    private bool previousTestOverlap = false;
-
-    void Update()
+    private void Start()
     {
-        TestOverlap = timer.EventTriggered;
-
-        if(TestOverlap && !previousTestOverlap)
+        OverlapTimer[] timers = FindObjectsOfType<OverlapTimer>();
+        foreach (var timer in timers)
         {
-             Debug.Log("ゲームマネージャーでのTrue");
+            timer.OnOverlapCompleted += HandleBloodEffect;
         }
+    
+    }
 
+    private void HandleBloodEffect(BodyPart part)
+    {
+        switch(part)
+        {
+            case BodyPart.Head:
+                Debug.Log("頭の判定True");
+                break;
 
-        previousTestOverlap = TestOverlap;
+            case BodyPart.Body:
+                Debug.Log("胴体の判定True");
+                break;
+
+            case BodyPart.Leg:
+                Debug.Log("足の判定True");
+                break;
+        }
     }
 
 }

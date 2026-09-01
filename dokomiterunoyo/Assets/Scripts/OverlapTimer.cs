@@ -1,37 +1,53 @@
 using UnityEngine;
+using System;
+using System.Collections;
+
+public enum BodyPart
+{
+    Head,
+    Body,
+    Leg
+}
 
 public class OverlapTimer : MonoBehaviour
 {
-    [SerializeField] private OverlapTarget target;
-    // = 2.0fに任意のフレーム数で変更
-    [SerializeField] private float requiredTime = 2.0f;
-    private bool previousbool = false;
+    [SerializeField] private float requiredTime = 2.0f; // 秒数
+    [SerializeField] private BodyPart bodyPart; // Inspectorで部位指定
 
-    private float timer = 0f;
-    public bool EventTriggered{ get; private set; }
+    public event Action<BodyPart> OnOverlapCompleted;
 
+    private Coroutine timerCoroutine;
 
-    private void Update()
+    private void OnMouseEnter()
     {
-        if(target.IsOverlapping)
-        {
-            timer += Time.deltaTime;
+        Debug.Log("Mouse Entered");
+        StartTimer();
+    }
 
-            if(timer >= requiredTime)
-            {
-                EventTriggered = true;
-            }
-        }
-        else
-        {
-            timer = 0f;
-            EventTriggered = false;
+    private void OnMouseExit()
+    {
+        Debug.Log("Mouse Exited");
+        StopTimer();
+    }
 
-        }
-        if (EventTriggered && !previousbool)
+    private void StartTimer()
+    {
+        timerCoroutine = StartCoroutine(TimerRoutine());
+    }
+
+    private void StopTimer()
+    {
+        if (timerCoroutine != null)
         {
-            Debug.Log("２フレーム重なりました");
+            StopCoroutine(timerCoroutine);
+            timerCoroutine = null;
         }
-        previousbool = EventTriggered;
+    }
+
+    private IEnumerator TimerRoutine()
+    {
+        yield return new WaitForSeconds(requiredTime);
+        // 指定時間経過後に合図を送る
+        OnOverlapCompleted?.Invoke(bodyPart);
     }
 }
