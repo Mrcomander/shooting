@@ -10,6 +10,7 @@ public class DialogueController : MonoBehaviour
 
     public void StartDialogue()
     {
+
         //selectorによるセリフ選び
         Dialogue selectedDialogue = selector.SelectDialogue();
 

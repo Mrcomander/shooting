@@ -31,4 +31,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    //立ち絵の状態保持
+
+    public string CurrentPortrait { get; private set; }
+
+    
+    public void SetPortraitState(
+        string portrait)
+    {
+        CurrentPortrait = portrait;
+    }
 }
