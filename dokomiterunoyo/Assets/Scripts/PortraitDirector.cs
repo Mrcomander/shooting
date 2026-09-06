@@ -15,9 +15,24 @@ public class PortraitDirector : MonoBehaviour
         portraitController.ChangePortrait("Happy");
     }
 
-    public void UpdatePortrait()
+    public void Update()
     {
         // ここに立ち絵を決定する具体的な条件を書く
 
+        if(gameManager.head)
+        {
+            portraitController.ChangePortrait("Happy");
+            gameManager.head = false;
+        }
+        if(gameManager.body)
+        {
+            portraitController.ChangePortrait("Question");
+            gameManager.body = false;
+        }
+        if(gameManager.leg)
+        {
+            portraitController.ChangePortrait("Surprised");
+            gameManager.leg = false;
+        }
     }
 }

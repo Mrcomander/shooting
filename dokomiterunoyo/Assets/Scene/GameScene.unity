@@ -842,7 +842,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2f81cd7013ba76a488c8f5edeb8cd66c, type: 3}
   - name: Question
     sprite: {fileID: 21300000, guid: a3714fa955a03244cbbad300b1222933, type: 3}
-  - name: Surprise
+  - name: Surprised
     sprite: {fileID: 21300000, guid: c181d43ef64f24445bcaf8e35e5c9f76, type: 3}
   - name: Embarrassed
     sprite: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
@@ -1129,6 +1129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MainLoveMeter: 1000
+  head: 0
+  body: 0
+  leg: 0
 --- !u!4 &1433025030
 Transform:
   m_ObjectHideFlags: 0
@@ -1409,6 +1412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 579414422487253223, guid: c9eaedc8ab86cb44c961367417bea993, type: 3}
+      propertyPath: bodyPart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1119645567396691531, guid: c9eaedc8ab86cb44c961367417bea993, type: 3}
       propertyPath: m_LocalPosition.x
       value: 389.4
