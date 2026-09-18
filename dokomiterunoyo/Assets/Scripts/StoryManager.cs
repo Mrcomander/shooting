@@ -6,14 +6,22 @@ using TMPro;
 
 public class StoryManager : MonoBehaviour
 {
-    [SerializeField] private StoryData[] storyDatas;
+     [Header("最初に再生するStoryData")]
+    [SerializeField] private StoryData startStory;
 
-    [SerializeField] private Image Background;
+
+    [Header("画面のUI")]
+    [SerializeField] private Image background;
     [SerializeField] private Image characterImage;
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI characterName;
 
-    public int storyIndex {get; private set;}
+    [Header("選択肢UI")]
+    [SerializeField] private GameObject choicePanel;
+    [SerializeField] private Button choiceButtonPrefab;
+    [SerializeField] private Transform choiceParent;
+
+    private StoryData currentStory;
     public int textIndex {get; private set;}
 
     private bool finishText = false;
@@ -22,25 +30,32 @@ public class StoryManager : MonoBehaviour
     {
         storyText.text = "";
         characterName.text = "";
-        SetStoryElement(storyIndex, textIndex);
+        choicePanel.SetActive(false);
+
+        currentStory = startStory;
+        textIndex = 0;
+        SetStoryElement(textIndex);
     }
 
     private void Update()
     {
+        //選択肢中はエンター判定しない
+        if(choicePanel.activeSelf) return;
+        
+        
         if(Input.GetKeyDown(KeyCode.Return) && finishText)
         {
             textIndex++;
-            storyText.text = "";
-            ProgressionStory(storyIndex);
+            ProgressionStory();
         }
     }
 
 
-    private void SetStoryElement(int _storyIndex, int _textIndex)
+    private void SetStoryElement(int _textIndex)
     {
-        var storyElement = storyDatas[_storyIndex].stories[_textIndex];
+        var storyElement = currentStory.stories[_textIndex];
 
-        Background.sprite = storyElement.Background;
+        background.sprite = storyElement.Background;
         characterImage.sprite = storyElement.CharacterImage;
         
         characterName.text = storyElement.CharacterName;
@@ -48,33 +63,82 @@ public class StoryManager : MonoBehaviour
         finishText = false;
 
         //storyText.text = storyElement.StoryText;
-        StartCoroutine(TypeSentence(_storyIndex, _textIndex));
+        StartCoroutine(TypeSentence(_textIndex));
     }
 
-    private void ProgressionStory(int _storyIndex)
+    private void ProgressionStory()
     {
-        if (textIndex < storyDatas[_storyIndex].stories.Count)
+        if (textIndex < currentStory.stories.Count)
         {
-            SetStoryElement(storyIndex, textIndex);
+            SetStoryElement(textIndex);
         }
         else
         {
             //シーン変更、選択肢を出す、別のScriptableObjectを呼ぶ
-            ChangeStoryElement();
+            EndOfStory();
         
         }
     }
 
-    private void ChangeStoryElement()
+    private void EndOfStory()
     {
-        textIndex = 0;
-        storyIndex++;
-        SetStoryElement(storyIndex,textIndex);
+        switch (currentStory.endType)
+        {
+            case EndType.NextStory:
+                ChangeStoryElement(currentStory.nextStory);
+                break;
+
+            case EndType.Choice:
+                if (currentStory.choices.Count > 0)
+                    ShowChoices();
+                else
+                    Debug.LogWarning($"{currentStory.name} : endTypeがChoiceですがchoicesが空です");
+                break;
+
+            case EndType.End:
+                Debug.Log("会話終了");
+                break;
+        }
     }
 
-    private IEnumerator TypeSentence(int _storyIndex, int _textIndex)
+    private void ChangeStoryElement(StoryData _next)
     {
-        foreach (var letter in storyDatas[_storyIndex].stories[_textIndex].StoryText.ToCharArray())
+        currentStory = _next;
+        textIndex = 0;
+
+        ClearChoices();
+        choicePanel.SetActive(false);
+        SetStoryElement(textIndex);
+        
+    }
+
+    private void ShowChoices()
+    {
+        choicePanel.SetActive(true);
+        ClearChoices();
+
+        foreach (var choice in currentStory.choices)
+        {
+            var button = Instantiate(choiceButtonPrefab, choiceParent);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = choice.ChoiceText;
+
+            var next = choice.NextStory;   // ループ内で受けるのが重要
+            button.onClick.AddListener(() => ChangeStoryElement(next));
+        }
+    }
+
+    // 生成済みの選択肢ボタンを全部消す
+    private void ClearChoices()
+    {
+        foreach (Transform child in choiceParent)
+            Destroy(child.gameObject);
+    }
+
+    private IEnumerator TypeSentence(int _textIndex)
+    {
+        storyText.text = ""; 
+        
+        foreach (var letter in currentStory.stories[_textIndex].StoryText.ToCharArray())
         {
             storyText.text += letter;
             yield return new WaitForSeconds(0.05f);

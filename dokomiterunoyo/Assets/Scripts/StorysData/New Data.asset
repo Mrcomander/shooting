@@ -25,3 +25,6 @@ MonoBehaviour:
     CharacterImage: {fileID: 21300000, guid: a3714fa955a03244cbbad300b1222933, type: 3}
     StoryText: "\u30E9\u30A4\u30CA\u30FC"
     CharacterName: "\u6A58\u3000\u5F0F"
+  endType: 0
+  nextStory: {fileID: 11400000, guid: 8cf1a4b8c88ea23409591b77829f4afe, type: 2}
+  choices: []
