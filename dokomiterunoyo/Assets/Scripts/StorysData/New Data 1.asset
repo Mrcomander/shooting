@@ -22,3 +22,5 @@ MonoBehaviour:
   choices:
   - ChoiceText: "\u3046\u3093"
     NextStory: {fileID: 11400000, guid: 519d974acbf868f48a8cd383d619f830, type: 2}
+  - ChoiceText: "\u3044\u3044\u3048"
+    NextStory: {fileID: 11400000, guid: 519d974acbf868f48a8cd383d619f830, type: 2}
