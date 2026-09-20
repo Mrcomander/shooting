@@ -15,6 +15,9 @@ public class PortraitShow : MonoBehaviour
     [SerializeField]
     private Image portraitImage;
 
+    [SerializeField]
+    private PortraitHitBoxController portraitHitBoxController;
+
 
     // イベント登録
 
@@ -40,6 +43,6 @@ public class PortraitShow : MonoBehaviour
 
         portraitImage.sprite = sprite;
 
-        
+        portraitHitBoxController.SetHitBox();
     }
 }

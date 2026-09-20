@@ -31,7 +31,7 @@ public class PortraitDirector : MonoBehaviour
         }
         if(gameManager.leg)
         {
-            portraitController.ChangePortrait("Surprised");
+            portraitController.ChangePortrait("Surprise");
             gameManager.leg = false;
         }
     }
