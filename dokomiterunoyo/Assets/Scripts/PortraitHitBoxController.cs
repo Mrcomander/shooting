@@ -18,6 +18,7 @@ public class PortraitHitBoxController : MonoBehaviour
             surpriseHitBox.SetActive(false);
             questionHitBox.SetActive(false);
             embarrassedHitBox.SetActive(false);
+            Debug.Log("当たり判定をNormalに変更");
         }
 
         if (gameManager.CurrentPortrait == "Happy")
@@ -27,6 +28,7 @@ public class PortraitHitBoxController : MonoBehaviour
             surpriseHitBox.SetActive(false);
             questionHitBox.SetActive(false);
             embarrassedHitBox.SetActive(false);
+            Debug.Log("当たり判定をHappyに変更");
         }
 
         if (gameManager.CurrentPortrait == "Surprise")
@@ -36,6 +38,7 @@ public class PortraitHitBoxController : MonoBehaviour
             surpriseHitBox.SetActive(true);
             questionHitBox.SetActive(false);
             embarrassedHitBox.SetActive(false);
+            Debug.Log("当たり判定をSurpriseに変更");
         }
         if (gameManager.CurrentPortrait == "Question")
         {
@@ -44,6 +47,7 @@ public class PortraitHitBoxController : MonoBehaviour
             surpriseHitBox.SetActive(false);
             questionHitBox.SetActive(true);
             embarrassedHitBox.SetActive(false);
+            Debug.Log("当たり判定をQuestionに変更");
         }
         if (gameManager.CurrentPortrait == "Embarrassed")
         {
@@ -52,6 +56,7 @@ public class PortraitHitBoxController : MonoBehaviour
             surpriseHitBox.SetActive(false);
             questionHitBox.SetActive(false);
             embarrassedHitBox.SetActive(true);
+            Debug.Log("当たり判定をEmbarrassedに変更");
         }
     }
 }
