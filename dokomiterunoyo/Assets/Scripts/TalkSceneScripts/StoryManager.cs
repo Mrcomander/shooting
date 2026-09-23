@@ -4,11 +4,25 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 
+[System.Serializable]
+public class ConditionalStart
+{
+    [Tooltip("Inspector上でわかりやすくするためのメモ。処理には使われない")]
+    public string memo;
+
+    [Tooltip("GameScene側で立てるフラグ名と、一字一句同じ文字列を入れる")]
+    public string requiredFlag;
+
+    public StoryData story;
+}
+
 public class StoryManager : MonoBehaviour
 {
-     [Header("最初に再生するStoryData")]
-    [SerializeField] private StoryData startStory;
+    [Header("開始分岐（上から順に判定。最初に条件を満たしたものを使う）")]
+    [SerializeField] private List<ConditionalStart> conditionalStarts = new List<ConditionalStart>();
 
+    [Header("どれにも当てはまらない場合")]
+    [SerializeField] private StoryData defaultStory;
 
     [Header("画面のUI")]
     [SerializeField] private Image background;
@@ -22,9 +36,11 @@ public class StoryManager : MonoBehaviour
     [SerializeField] private Transform choiceParent;
 
     private StoryData currentStory;
-    public int textIndex {get; private set;}
+    public int textIndex { get; private set; }
 
     private bool finishText = false;
+    private Coroutine typingCoroutine;
+
 
     private void Start()
     {
@@ -32,24 +48,54 @@ public class StoryManager : MonoBehaviour
         characterName.text = "";
         choicePanel.SetActive(false);
 
-        currentStory = startStory;
+        currentStory = ResolveStartStory();
+
+        if (currentStory == null)
+        {
+            Debug.LogError("StoryManager : 開始するStoryDataがありません（条件にもdefaultStoryにも該当なし）");
+            return;
+        }
+
         textIndex = 0;
         SetStoryElement(textIndex);
     }
 
+    // StoryFlagStoreを見て、最初に再生するStoryDataを決める
+    private StoryData ResolveStartStory()
+    {
+        foreach (var condition in conditionalStarts)
+        {
+            if (string.IsNullOrEmpty(condition.requiredFlag))
+            {
+                Debug.LogWarning($"StoryManager : 条件「{condition.memo}」のrequiredFlagが未設定です");
+                continue;
+            }
+
+            if (!StoryFlagStore.GetFlag(condition.requiredFlag))
+                continue;
+
+            if (condition.story == null)
+            {
+                Debug.LogWarning($"StoryManager : 条件「{condition.memo}」のStoryDataが未設定です");
+                continue;
+            }
+
+            return condition.story;
+        }
+
+        return defaultStory;
+    }
+
     private void Update()
     {
-        //選択肢中はエンター判定しない
-        if(choicePanel.activeSelf) return;
-        
-        
-        if(Input.GetKeyDown(KeyCode.Return) && finishText)
+        if (choicePanel.activeSelf) return;
+
+        if (Input.GetKeyDown(KeyCode.Return) && finishText)
         {
             textIndex++;
             ProgressionStory();
         }
     }
-
 
     private void SetStoryElement(int _textIndex)
     {
@@ -57,27 +103,22 @@ public class StoryManager : MonoBehaviour
 
         background.sprite = storyElement.Background;
         characterImage.sprite = storyElement.CharacterImage;
-        
         characterName.text = storyElement.CharacterName;
 
         finishText = false;
 
-        //storyText.text = storyElement.StoryText;
-        StartCoroutine(TypeSentence(_textIndex));
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeSentence(_textIndex));
     }
 
     private void ProgressionStory()
     {
         if (textIndex < currentStory.stories.Count)
-        {
             SetStoryElement(textIndex);
-        }
         else
-        {
-            //シーン変更、選択肢を出す、別のScriptableObjectを呼ぶ
             EndOfStory();
-        
-        }
     }
 
     private void EndOfStory()
@@ -103,13 +144,18 @@ public class StoryManager : MonoBehaviour
 
     private void ChangeStoryElement(StoryData _next)
     {
+        if (_next == null)
+        {
+            Debug.LogWarning($"{currentStory.name} : 次のStoryDataが設定されていません");
+            return;
+        }
+
         currentStory = _next;
         textIndex = 0;
 
         ClearChoices();
         choicePanel.SetActive(false);
         SetStoryElement(textIndex);
-        
     }
 
     private void ShowChoices()
@@ -122,12 +168,11 @@ public class StoryManager : MonoBehaviour
             var button = Instantiate(choiceButtonPrefab, choiceParent);
             button.GetComponentInChildren<TextMeshProUGUI>().text = choice.ChoiceText;
 
-            var next = choice.NextStory;   // ループ内で受けるのが重要
+            var next = choice.NextStory;
             button.onClick.AddListener(() => ChangeStoryElement(next));
         }
     }
 
-    // 生成済みの選択肢ボタンを全部消す
     private void ClearChoices()
     {
         foreach (Transform child in choiceParent)
@@ -136,8 +181,8 @@ public class StoryManager : MonoBehaviour
 
     private IEnumerator TypeSentence(int _textIndex)
     {
-        storyText.text = ""; 
-        
+        storyText.text = "";
+
         foreach (var letter in currentStory.stories[_textIndex].StoryText.ToCharArray())
         {
             storyText.text += letter;
