@@ -6,15 +6,7 @@ public class GameManager : MonoBehaviour
     public bool body = false;
     public bool leg = false;
 
-    private void Start()
-    {
-        OverlapTimer[] timers = FindObjectsOfType<OverlapTimer>();
-        foreach (var timer in timers)
-        {
-            timer.OnOverlapCompleted += HandleBloodEffect;
-        }
-    
-    }
+
 
 public enum PortraitState { Normal, Happy, Surprise, Question, Embarrassed }
 

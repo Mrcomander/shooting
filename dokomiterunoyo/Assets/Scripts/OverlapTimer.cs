@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public enum BodyPart
 {
@@ -9,45 +10,41 @@ public enum BodyPart
     Leg
 }
 
-public class OverlapTimer : MonoBehaviour
+public class OverlapTimer : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private float requiredTime = 2.0f; // 秒数
-    [SerializeField] private BodyPart bodyPart; // Inspectorで部位指定
+    [SerializeField] private BodyPart bodyPart; //Inspectorで部位を指定
 
-    public event Action<BodyPart> OnOverlapCompleted;
+    public BodyPart Part => bodyPart;
+    
+    public event Action<BodyPart> OnEnter;
+    public event Action<BodyPart> OnExit;
 
-    private Coroutine timerCoroutine;
+    private bool isInside = false;
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse Entered");
-        StartTimer();
+        isInside = true;
+        Debug.Log($"入った：{bodyPart}");
+        OnEnter?.Invoke(bodyPart);
+
+    }
+    
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Exit();
     }
 
-    private void OnMouseExit()
+    public void OnDisable()
     {
-        Debug.Log("Mouse Exited");
-        StopTimer();
+        Exit();
     }
 
-    private void StartTimer()
+    private void Exit()
     {
-        timerCoroutine = StartCoroutine(TimerRoutine());
-    }
+        if (!isInside) return;
 
-    private void StopTimer()
-    {
-        if (timerCoroutine != null)
-        {
-            StopCoroutine(timerCoroutine);
-            timerCoroutine = null;
-        }
-    }
-
-    private IEnumerator TimerRoutine()
-    {
-        yield return new WaitForSeconds(requiredTime);
-        // 指定時間経過後に合図を送る
-        OnOverlapCompleted?.Invoke(bodyPart);
+        isInside = false;
+        Debug.Log($"出た：{bodyPart}");
+        OnExit?.Invoke(bodyPart);
     }
 }
