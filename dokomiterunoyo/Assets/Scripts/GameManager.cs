@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     
     }
 
+public enum PortraitState { Normal, Happy, Surprise, Question, Embarrassed }
+
     
 
     private void HandleBloodEffect(BodyPart part)

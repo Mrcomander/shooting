@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6853040793252013750}
   - component: {fileID: 6384236906000832538}
   - component: {fileID: 1778595190887901906}
+  - component: {fileID: 8906525208206167061}
   m_Layer: 0
   m_Name: HitBox_Base 1
   m_TagString: Untagged
@@ -93,3 +94,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!114 &8906525208206167061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446312185824063996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf39bfc6d39bdb4cb722544523d090b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitBoxDebugView
+  show: 1
+  color: {r: 1, g: 0.3, b: 0.5, a: 0.35}
