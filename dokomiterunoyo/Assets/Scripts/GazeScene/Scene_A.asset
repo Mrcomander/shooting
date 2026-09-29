@@ -13,3 +13,14 @@ MonoBehaviour:
   m_Name: Scene_A
   m_EditorClassIdentifier: Assembly-CSharp::GazeScene
   portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+  branches:
+  - memo: "\u8DB3\u3092\u4E09\u79D2"
+    conditions:
+    - type: 1
+      part: 2
+      seconds: 3
+  - memo: "\u982D\u3092\u898B\u305F\u3089"
+    conditions:
+    - type: 0
+      part: 0
+      seconds: 0
