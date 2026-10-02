@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class DialogueUI : MonoBehaviour
 
     // セリフ交換処理
     private Coroutine dialogueCoroutine;
+
+    //カワセ追加セルフの終わりを検知
+    public event Action OnFinished;
 
     // セリフを受け取る
     public void ShowDialogue(Dialogue dialogue)
@@ -89,6 +93,8 @@ public class DialogueUI : MonoBehaviour
                 currentDialogue = null;
 
                 dialogueCoroutine = null;
+
+                OnFinished?.Invoke();
             }
         }
     }

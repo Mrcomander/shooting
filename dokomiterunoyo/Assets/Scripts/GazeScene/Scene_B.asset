@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Scene_B
   m_EditorClassIdentifier: Assembly-CSharp::GazeScene
   portraitPrefab: {fileID: 553585874017799889, guid: 3d598db5b6d1fab4ab7ac13d71be0e4f, type: 3}
+  branches:
+  - memo: 
+    conditions: []
+    lines: []
+    nextScene: {fileID: 0}

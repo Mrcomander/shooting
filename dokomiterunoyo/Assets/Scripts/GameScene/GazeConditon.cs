@@ -38,6 +38,13 @@ public class GazeBranch
     public string memo;
     public List<GazeCondition> conditions = new List<GazeCondition>();
 
+    [Header("結果")]
+    [Tooltip("上から順に4秒ずつ表示される。IDは空でOK")]
+    public List<Dialogue> lines = new List<Dialogue>();
+
+    [Tooltip("セリフが終わったら進む場面。空なら今のまま")]
+    public GazeScene nextScene;
+    
     public bool IsMet(GazeTracker tracker)
     {
         if(conditions.Count == 0) return false;
