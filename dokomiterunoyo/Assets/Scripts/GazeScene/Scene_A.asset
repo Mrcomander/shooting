@@ -16,17 +16,22 @@ MonoBehaviour:
   branches:
   - memo: "\u8DB3\u3092\u4E09\u79D2"
     conditions:
-    - type: 1
+    - type: 0
       part: 2
       seconds: 3
       count: 1
       order: 
-      flagName: 
+      flag: {fileID: 0}
       value: 0
-    lines: []
+    lines:
+    - id: 
+      speaker: 
+      text: 
+      portraitPrefab: {fileID: 0}
     loveChange: 0
     hpChange: 0
-    setFlags: []
+    setFlags:
+    - {fileID: 0}
     nextScene: {fileID: 0}
   - memo: "\u982D\u3092\u898B\u305F\u3089"
     conditions:
@@ -35,7 +40,7 @@ MonoBehaviour:
       seconds: 0
       count: 1
       order: 
-      flagName: 
+      flag: {fileID: 0}
       value: 0
     lines:
     - id: 
@@ -49,5 +54,5 @@ MonoBehaviour:
     loveChange: 50
     hpChange: 50
     setFlags:
-    - sukiFlag
+    - {fileID: 11400000, guid: 636ea51e0eb74f544b0d8332d49cd3eb, type: 2}
     nextScene: {fileID: 11400000, guid: 70d0c59ca57be424991fe06ef379d54f, type: 2}

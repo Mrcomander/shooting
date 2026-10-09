@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c31f7fb0439c3f4290e171fd6ce2c3a, type: 3}
   m_Name: EV_Looked_Face
   m_EditorClassIdentifier: Assembly-CSharp::FlagData
-  description: 
+  description: "\u30C7\u30D0\u30C3\u30B0\u8981\u3001\u9854\u898B\u3089\u308C\u305F\u3068\u304D"

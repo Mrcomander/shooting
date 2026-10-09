@@ -17,6 +17,12 @@ public class GazeSceneRunner : MonoBehaviour
     [SerializeField] private bool clearFlagsOnStart = true;
 
     public GazeScene CurrentScene { get; private set; }
+    public GazeBranch PendingBranch => pendingBranch;
+
+    public bool IsUsed(GazeBranch branch)
+    {
+        return usedBranches.Contains(branch);
+    }
 
     private GameObject currentPortrait;
     private bool decided = false;

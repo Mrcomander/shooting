@@ -721,7 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddbc1b0f9a44a443b13e458cd338866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortraitNotifier
-  gameManager: {fileID: 1433025029}
 --- !u!4 &398026032
 Transform:
   m_ObjectHideFlags: 0
@@ -1083,12 +1082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dfbce83d52198458d7da9947c2fe5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortraitHitBoxController
-  gameManager: {fileID: 1433025029}
-  normalHitBox: {fileID: 1817401169}
-  happyHitBox: {fileID: 1141136012}
-  surpriseHitBox: {fileID: 228970462}
-  questionHitBox: {fileID: 1480415107}
-  embarrassedHitBox: {fileID: 369937459}
 --- !u!4 &743456922
 Transform:
   m_ObjectHideFlags: 0
@@ -1836,17 +1829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd38aba4f89fd943b2d5d8f732f0766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortraitDatabase
-  portraits:
-  - name: Normal
-    sprite: {fileID: 21300000, guid: 3797f4095fb94794ea83c70edee3cd18, type: 3}
-  - name: Happy
-    sprite: {fileID: 21300000, guid: 2f81cd7013ba76a488c8f5edeb8cd66c, type: 3}
-  - name: Question
-    sprite: {fileID: 21300000, guid: a3714fa955a03244cbbad300b1222933, type: 3}
-  - name: Surprise
-    sprite: {fileID: 21300000, guid: c181d43ef64f24445bcaf8e35e5c9f76, type: 3}
-  - name: Embarrassed
-    sprite: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
 --- !u!4 &1271042107
 Transform:
   m_ObjectHideFlags: 0
@@ -2390,6 +2372,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 266047352}
   gameManager: {fileID: 0}
   playerHealth: {fileID: 0}
+  clearFlagsOnStart: 1
 --- !u!4 &1466930297
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,6 +2565,56 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 359.13776, y: 0.00005, z: -524.242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1547309748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1547309750}
+  - component: {fileID: 1547309749}
+  m_Layer: 0
+  m_Name: DebugGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1547309749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547309748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37aa369739317014dbf9c6513de375f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebugUI
+  show: 1
+  fontSize: 15
+  gameManager: {fileID: 1433025029}
+  playerHealth: {fileID: 476559150}
+  runner: {fileID: 0}
+  tracker: {fileID: 0}
+--- !u!4 &1547309750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547309748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 433.82196, y: 255.81071, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3357,11 +3390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8363ad24b2da14a9c1af9e39cee576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortraitShow
-  gameManager: {fileID: 1433025029}
-  database: {fileID: 1271042106}
-  portraitNotifier: {fileID: 398026031}
-  portraitImage: {fileID: 2074544669}
-  portraitHitBoxController: {fileID: 743456921}
 --- !u!114 &2074544669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3587,3 +3615,4 @@ SceneRoots:
   - {fileID: 743456922}
   - {fileID: 1587140316}
   - {fileID: 1466930297}
+  - {fileID: 1547309750}

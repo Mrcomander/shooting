@@ -16,17 +16,17 @@ MonoBehaviour:
   branches:
   - memo: "\u6A19\u6E96"
     conditions:
-    - type: 5
+    - type: 4
       part: 0
       seconds: 0
       count: 0
       order: 
-      flagName: 
-      value: 2
+      flag: {fileID: 11400000, guid: 636ea51e0eb74f544b0d8332d49cd3eb, type: 2}
+      value: 0
     lines:
     - id: 
       speaker: "\u6A58\u5F0F"
-      text: "\u3044\u3044\u3067\u3059\u306A\u30FC"
+      text: "\u304A\u3001\u30D5\u30E9\u30B0\u304C\u7ACB\u3063\u305F\u306D"
       portraitPrefab: {fileID: 0}
     loveChange: 0
     hpChange: 0
