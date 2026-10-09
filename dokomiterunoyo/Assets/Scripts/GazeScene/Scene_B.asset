@@ -14,7 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GazeScene
   portraitPrefab: {fileID: 553585874017799889, guid: 3d598db5b6d1fab4ab7ac13d71be0e4f, type: 3}
   branches:
-  - memo: 
-    conditions: []
-    lines: []
+  - memo: "\u6A19\u6E96"
+    conditions:
+    - type: 5
+      part: 0
+      seconds: 0
+      count: 0
+      order: 
+      flagName: 
+      value: 2
+    lines:
+    - id: 
+      speaker: "\u6A58\u5F0F"
+      text: "\u3044\u3044\u3067\u3059\u306A\u30FC"
+      portraitPrefab: {fileID: 0}
+    loveChange: 0
+    hpChange: 0
+    setFlags: []
     nextScene: {fileID: 0}

@@ -1970,12 +1970,15 @@ MonoBehaviour:
   - id: Shiki_001
     speaker: "\u6A58\u5F0F"
     text: "\u3069\u3046\u304B\u3057\u305F\uFF1F"
+    portraitPrefab: {fileID: 0}
   - id: Shiki_002
     speaker: "\u6A58\u5F0F"
     text: "\u3048\u3001\u3082\u3057\u304B\u3057\u3066\u9AEA\u306E\u6BDB\u8DF3\u306D\u3066\u308B\uFF1F"
+    portraitPrefab: {fileID: 0}
   - id: Shiki_003
     speaker: "\u6A58\u5F0F"
     text: "\u2026\u2026\u3082\u3063\u304B\u3044\u76F4\u3057\u3066\u304F\u308B\u3002\u8A00\u3044\u3075\u3089\u3057\u3061\u3083\u3060\u3081\u3060\u304B\u3089\u306D"
+    portraitPrefab: {fileID: 0}
 --- !u!4 &1298105973
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,6 +2388,8 @@ MonoBehaviour:
   startScene: {fileID: 11400000, guid: 68927c7b3bf1c6d4c963d474fcadcda8, type: 2}
   tracker: {fileID: 1466930299}
   dialogueUI: {fileID: 266047352}
+  gameManager: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!4 &1466930297
 Transform:
   m_ObjectHideFlags: 0
@@ -2428,6 +2433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GazeTracker
   history: []
+  lookOrder: 
 --- !u!1001 &1471843812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3410,7 +3416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2090062530
 MonoBehaviour:
   m_ObjectHideFlags: 0

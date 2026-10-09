@@ -30,6 +30,9 @@ public class DialogueUI : MonoBehaviour
     //カワセ追加セルフの終わりを検知
     public event Action OnFinished;
 
+    //カワセ追加 セリフを1つ表示するたびに鳴らす（どのセリフかも渡す）
+    public event Action<Dialogue> OnLineShown;
+
     // セリフを受け取る
     public void ShowDialogue(Dialogue dialogue)
     {
@@ -65,6 +68,8 @@ public class DialogueUI : MonoBehaviour
         speakerText.text = currentDialogue.speaker;
 
         dialogueText.text = currentDialogue.text;
+
+        OnLineShown?.Invoke(currentDialogue);
     }
 
     // 一定時間ごとにセリフを交換

@@ -13,6 +13,9 @@ public class Dialogue
     //セリフ本文
     [TextArea(2, 5)]
     public string text;
+
+    //このセリフを表示するときに変える立ち絵（空なら変えない）カワセ追加
+    public GameObject portraitPrefab;
 }
 
 public class DialogueDatabase : MonoBehaviour
