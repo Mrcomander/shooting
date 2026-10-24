@@ -1,10 +1,29 @@
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
+
     [SerializeField] public int MainLoveMeter = 1000;
     public bool head = false;
     public bool body = false;
     public bool leg = false;
+
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        //重複チェック
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        //シーン間でGameManagerオブジェクトを保持
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    
+
 
     private void Start()
     {
