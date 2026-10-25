@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
 
@@ -22,6 +23,16 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    //好感度履歴リストを作成
+    private readonly List<int> loveMeterHistory = new List<int>();
+    public IReadOnlyList<int> LoveMeterHistory => loveMeterHistory;
+
+    public void RecordLoveMeter()
+    {
+        loveMeterHistory.Add(MainLoveMeter);
+    }
+
     
 
 
