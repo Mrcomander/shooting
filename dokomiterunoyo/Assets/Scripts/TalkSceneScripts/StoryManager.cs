@@ -63,6 +63,13 @@ public class StoryManager : MonoBehaviour
     // StoryFlagStoreを見て、最初に再生するStoryDataを決める
     private StoryData ResolveStartStory()
     {
+        if(GameManager.NextTalk != null)
+        {
+            StoryData story = GameManager.NextTalk;
+            GameManager.NextTalk = null;
+            return story;
+        }
+
         foreach (var condition in conditionalStarts)
         {
             if (string.IsNullOrEmpty(condition.requiredFlag))
@@ -138,6 +145,13 @@ public class StoryManager : MonoBehaviour
 
             case EndType.End:
                 Debug.Log("会話終了");
+                break;
+
+            case EndType.ToGaze:
+                if(currentStory.nextGaze != null)
+                    GameManager.GoToGaze(currentStory.nextGaze);
+                else
+                    Debug.LogWarning($"{currentStory.name} : endTypeがToGazeですがnextGazeが空です");
                 break;
         }
     }

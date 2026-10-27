@@ -1,7 +1,62 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] public int MainLoveMeter = 1000;
+    //GameManagerをシーンをまたいでも使える形に変更。
+
+    public const int StartLove = 1000;
+    public const int MaxHP = 1000;
+
+    public const string GazeSceneName = "GameScene";
+    public const string TalkSceneName = "TalkScene";
+
+    public static int Love = StartLove;
+    public static int HP = MaxHP;
+
+    public static StoryData NextTalk;
+    public static GazeScene NextGaze;
+
+    public static bool IsStarted { get; private set; }
+
+    public int MainLoveMeter
+    {
+        get{return Love;}
+        set{Love = value;}
+    }
+
+    public static void NewGame()
+    {
+        Love = StartLove;
+        HP = MaxHP;
+        NextTalk = null;
+        NextGaze = null;
+        StoryFlagStore.ClearAll();
+        IsStarted = true;
+        Debug.Log("GameManager：ニューゲーム");
+    }
+
+    public static void GoToTalk(StoryData story)
+    {
+        NextTalk = story;
+        SceneManager.LoadScene(TalkSceneName);
+    }
+
+    public static void GoToGaze(GazeScene scene)
+    {
+        NextGaze = scene;
+        SceneManager.LoadScene(GazeSceneName);
+    }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetOnPlay()
+    {
+        IsStarted = false;
+        NextTalk = null;
+        NextGaze = null;
+    }
+
+
+    //旧バージョン
     public bool head = false;
     public bool body = false;
     public bool leg = false;

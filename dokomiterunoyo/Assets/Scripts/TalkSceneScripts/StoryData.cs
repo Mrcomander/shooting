@@ -6,7 +6,8 @@ public enum EndType
 {
     NextStory, //会話終わったら次のStoryDataへ
     Choice, //選択肢
-    End //終わり
+    End, //終わり
+    ToGaze//視線管理画面へ
 }
 
 [CreateAssetMenu(fileName="New Data" , menuName="StoryData")]
@@ -20,6 +21,9 @@ public class StoryData :ScriptableObject
 
     [Header("NextStory のとき使う")]
     public StoryData nextStory;
+
+    [Header("ToGazeの時に使う")]
+    public GazeScene nextGaze;
 
     [Header("Choice のとき使う")]
     public List<Choice> choices = new List<Choice>();

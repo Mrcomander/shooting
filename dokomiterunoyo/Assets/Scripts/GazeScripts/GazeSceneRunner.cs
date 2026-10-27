@@ -14,7 +14,6 @@ public class GazeSceneRunner : MonoBehaviour
 
     [Tooltip("空ならシーンの中から自動で探す")]
     [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private bool clearFlagsOnStart = true;
 
     public GazeScene CurrentScene { get; private set; }
     public GazeBranch PendingBranch => pendingBranch;
@@ -33,20 +32,24 @@ public class GazeSceneRunner : MonoBehaviour
     private void Awake()
     {
         // Inspectorで入れ忘れても動くように、空ならシーンの中から探す
-        if (gameManager == null) gameManager = FindFirstObjectByType<GameManager>();
-        if (playerHealth == null) playerHealth = FindFirstObjectByType<PlayerHealth>();
+        if (gameManager == null) gameManager = FindAnyObjectByType<GameManager>();
+        if (playerHealth == null) playerHealth = FindAnyObjectByType<PlayerHealth>();
         
-        if(clearFlagsOnStart)
+        if(!GameManager.IsStarted)
         {
-            StoryFlagStore.ClearAll();
+            GameManager.NewGame();
         }
     }
 
     private void Start()
     {
-        if (startScene != null)
+        // 会話画面から場面が指定されていればそれを、なければ startScene から始める
+        GazeScene first = GameManager.NextGaze != null ? GameManager.NextGaze : startScene;
+        GameManager.NextGaze = null;
+
+        if (first != null)
         {
-            ChangeScene(startScene);
+            ChangeScene(first);
         }
     }
 
@@ -189,7 +192,12 @@ public class GazeSceneRunner : MonoBehaviour
     // 次の場面へ進む。次の場面が空なら、今の場面で見るのを再開する
     private void GoNext(GazeBranch branch)
     {
-        if (branch.nextScene != null)
+
+        if(branch.nextTalk != null)
+        {
+            GameManager.GoToTalk(branch.nextTalk);
+        }
+        else if (branch.nextScene != null)
         {
             ChangeScene(branch.nextScene);
         }

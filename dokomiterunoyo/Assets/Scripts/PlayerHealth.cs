@@ -3,15 +3,14 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("体力")]
-    public int maxHP = 1000;
-    public int currentHP;
+    // 値はGameManagerに置いてある（シーンをまたいでも消えないように）
+    public int maxHP => GameManager.MaxHP;
 
-    void Start()
+    public int currentHP
     {
-        currentHP = maxHP;
+        get { return GameManager.HP; }
+        set { GameManager.HP = value; }
     }
-
 
 
 

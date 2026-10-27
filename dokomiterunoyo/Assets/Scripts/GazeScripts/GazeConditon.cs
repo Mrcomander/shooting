@@ -104,6 +104,9 @@ public class GazeBranch
     [Tooltip("セリフが終わったら進む場面。空なら今のまま")]
     public GazeScene nextScene;
 
+    [Tooltip("セリフが終わったら会話画面へ。")]
+    public StoryData nextTalk;
+
     public bool IsMet(GazeContext context)
     {
         if (conditions.Count == 0) return false;
