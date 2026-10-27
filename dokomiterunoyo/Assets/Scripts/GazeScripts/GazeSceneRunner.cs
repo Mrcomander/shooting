@@ -32,7 +32,9 @@ public class GazeSceneRunner : MonoBehaviour
     private void Awake()
     {
         // Inspectorで入れ忘れても動くように、空ならシーンの中から探す
-        if (gameManager == null) gameManager = FindAnyObjectByType<GameManager>();
+        // GameManagerはシーンをまたいで1つだけ残る。本物（Instance）があればそれを使う
+        if (GameManager.Instance != null) gameManager = GameManager.Instance;
+        else if (gameManager == null) gameManager = FindAnyObjectByType<GameManager>();
         if (playerHealth == null) playerHealth = FindAnyObjectByType<PlayerHealth>();
         
         if(!GameManager.IsStarted)

@@ -14,10 +14,12 @@ public class DebugUI : MonoBehaviour
 
     private void Awake()
     {
-        if (gameManager == null) gameManager = FindFirstObjectByType<GameManager>();
-        if (playerHealth == null) playerHealth = FindFirstObjectByType<PlayerHealth>();
-        if (runner == null) runner = FindFirstObjectByType<GazeSceneRunner>();
-        if (tracker == null) tracker = FindFirstObjectByType<GazeTracker>();
+        // GameManagerはシーンをまたいで1つだけ残る。本物（Instance）があればそれを使う
+        if (GameManager.Instance != null) gameManager = GameManager.Instance;
+        else if (gameManager == null) gameManager = FindAnyObjectByType<GameManager>();
+        if (playerHealth == null) playerHealth = FindAnyObjectByType<PlayerHealth>();
+        if (runner == null) runner = FindAnyObjectByType<GazeSceneRunner>();
+        if (tracker == null) tracker = FindAnyObjectByType<GazeTracker>();
     }
 
     void Update()
