@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     //GameManagerをシーンをまたいでも使える形に変更。
@@ -56,7 +57,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //旧バージョン
+
+
+    
     public bool head = false;
     public bool body = false;
     public bool leg = false;
@@ -64,6 +67,31 @@ public class GameManager : MonoBehaviour
 
 
 public enum PortraitState { Normal, Happy, Surprise, Question, Embarrassed }
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        //重複チェック
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        //シーン間でGameManagerオブジェクトを保持
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    //好感度履歴リストを作成
+    private readonly List<int> loveMeterHistory = new List<int>();
+    public IReadOnlyList<int> LoveMeterHistory => loveMeterHistory;
+
+    public void RecordLoveMeter()
+    {
+        loveMeterHistory.Add(MainLoveMeter);
+    }
+
 
     
 
