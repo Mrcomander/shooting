@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c597444bdab395247818d942d4eac082, type: 3}
+  m_Name: Test_Scene_B
+  m_EditorClassIdentifier: Assembly-CSharp::GazeScene
+  portraitPrefab: {fileID: 553585874017799889, guid: 3d598db5b6d1fab4ab7ac13d71be0e4f, type: 3}
+  branches:
+  - memo: "\u6A19\u6E96"
+    conditions:
+    - type: 4
+      part: 0
+      seconds: 0
+      count: 0
+      order: 
+      flag: {fileID: 11400000, guid: 636ea51e0eb74f544b0d8332d49cd3eb, type: 2}
+      value: 0
+    lines:
+    - id: 
+      speaker: "\u6A58\u5F0F"
+      text: "\u304A\u3001\u30D5\u30E9\u30B0\u304C\u7ACB\u3063\u305F\u306D"
+      portraitPrefab: {fileID: 0}
+    loveChange: 0
+    hpChange: 0
+    setFlags: []
+    nextScene: {fileID: 0}

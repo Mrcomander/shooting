@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c597444bdab395247818d942d4eac082, type: 3}
-  m_Name: Scene_A
+  m_Name: Test_Scene_A
   m_EditorClassIdentifier: Assembly-CSharp::GazeScene
   portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
   branches:

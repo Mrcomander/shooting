@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c597444bdab395247818d942d4eac082, type: 3}
-  m_Name: Scene_B
+  m_Name: A_GZ_C1_01_Start
   m_EditorClassIdentifier: Assembly-CSharp::GazeScene
-  portraitPrefab: {fileID: 553585874017799889, guid: 3d598db5b6d1fab4ab7ac13d71be0e4f, type: 3}
+  portraitPrefab: {fileID: 553585874017799889, guid: ff0c68ebf092328448229b26ad346756, type: 3}
   branches:
-  - memo: "\u6A19\u6E96"
+  - memo: "Keychain\u306E\u7ACB\u3061\u7D75\u304C\u307B\u3057\u3044\u306A\u308A"
     conditions:
-    - type: 4
-      part: 0
-      seconds: 0
+    - type: 1
+      part: 3
+      seconds: 3
       count: 0
       order: 
-      flag: {fileID: 11400000, guid: 636ea51e0eb74f544b0d8332d49cd3eb, type: 2}
+      flag: {fileID: 11400000, guid: af912d78172f557429da7ec1a1430236, type: 2}
       value: 0
     lines:
     - id: 
-      speaker: "\u6A58\u5F0F"
-      text: "\u304A\u3001\u30D5\u30E9\u30B0\u304C\u7ACB\u3063\u305F\u306D"
+      speaker: 
+      text: 
       portraitPrefab: {fileID: 0}
     loveChange: 0
     hpChange: 0
     setFlags: []
     nextScene: {fileID: 0}
+    nextTalk: {fileID: 11400000, guid: ff4308bbf4cdf104ba98397457ec4773, type: 2}
