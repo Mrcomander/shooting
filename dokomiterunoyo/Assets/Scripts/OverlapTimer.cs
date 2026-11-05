@@ -8,7 +8,8 @@ public enum BodyPart
     Head,
     Body,
     Leg,
-    Keychain
+    Keychain,
+    Paper
 }
 
 public class OverlapTimer : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a51659b9da73494e8667fc1d95e6ec3, type: 3}
+  m_Name: Y02_A_TK_C2_AfterGZ_Paper
+  m_EditorClassIdentifier: Assembly-CSharp::StoryData
+  stories:
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u6587\u82B1\u300C\u2026\u2026\u2026\u2026\u308F\u3059\u308C\u3066\u304F\u3060\u3055\u3044\u300D"
+    CharacterName: "\u6587\u82B1"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u305D\u308C\u306F\u3001\u3061\u3087\u3063\u3068\u7121\u7406\u304B\u3082\u300D"
+    CharacterName: "\u81EA\u5206"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u2026\u2026\u3045\u3046\u3046\u3045\u3046\u2026\u2026\u3063\u2026\u2026\u307E\u305F\u3084\u3063\u3061\u3083\u3063\u305F\u2026\u2026\uFF08\u51F9\uFF09\u300D\r\n"
+    CharacterName: "\u6587\u82B1"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u2015\u2015\u3058\u3083\u3042\u3001\u571F\u66DC\u65E5\u306B\u30E2\u30FC\u30EB\u306D\u300D"
+    CharacterName: "\u81EA\u5206"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u2026\u2026\u3048\uFF1F\u3000\u3042\u3041\u2026\u2026\u3046\u3093\u300D"
+    CharacterName: "\u6587\u82B1"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u3058\u3083\u3042\u3001\u307E\u305F\u306D\u300D"
+    CharacterName: "\u81EA\u5206"
+  - Background: {fileID: 21300000, guid: e257efbd698fda14ba22dce52ffaa9c0, type: 3}
+    CharacterImage: {fileID: 21300000, guid: c6d5576328f90a74c84cd5d61cea6b49, type: 3}
+    StoryText: "\u300C\u2026\u2026\u3046\u3093\u3001\u6C17\u3092\u4ED8\u3051\u3066\u5E30\u3063\u3066\u306D\u300D"
+    CharacterName: "\u6587\u82B1"
+  endType: 0
+  nextStory: {fileID: 0}
+  nextGaze: {fileID: 0}
+  choices: []
