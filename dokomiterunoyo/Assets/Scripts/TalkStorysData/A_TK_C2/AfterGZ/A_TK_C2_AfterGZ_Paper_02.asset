@@ -74,6 +74,6 @@ MonoBehaviour:
   nextGaze: {fileID: 0}
   choices:
   - ChoiceText: "\u3082\u3061\u308D\u3093\uFF01"
-    NextStory: {fileID: 0}
+    NextStory: {fileID: 11400000, guid: 9f1cb2ea15992c3488161ba479ebc2df, type: 2}
   - ChoiceText: "\u3044\u3084\u3001\u3061\u3087\u3063\u3068\u5148\u7D04\u304C\u3001\u3001\u3001"
     NextStory: {fileID: 0}

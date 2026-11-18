@@ -32,4 +32,4 @@ MonoBehaviour:
     hpChange: 0
     setFlags: []
     nextScene: {fileID: 0}
-    nextTalk: {fileID: 0}
+    nextTalk: {fileID: 11400000, guid: db64f685f4824a84ca82f4ea689e154f, type: 2}

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c597444bdab395247818d942d4eac082, type: 3}
+  m_Name: A_GZ_C3_01
+  m_EditorClassIdentifier: Assembly-CSharp::GazeScene
+  portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+  branches:
+  - memo: "\u30A2\u30AF\u30AD\u30FC\u3063\u3066\u3069\u3046\u3044\u3046\u7ACB\u3061\u7D75\u60F3\u5B9A\u304B\u7A00\u6597\u306B\u805E\u304B\u306A\u3044\u3068"
+    conditions:
+    - type: 1
+      part: 1
+      seconds: 2
+      count: 0
+      order: 
+      flag: {fileID: 0}
+      value: 0
+    lines:
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u3082\u3057\u304B\u3057\u3066\u3001\u3051\u3063\u3053\u3046\u5F85\u3063\u3061\u3083\u3063\u305F\uFF1F\u300D"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\u300C\u2026\u2026\u3044\u3084\u3001\u3079\u3064\u306B\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\uFF08\u3084\u3070\u3044\uFF09"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\uFF08\u79C1\u670D\u59FF\u306E\u4F0A\u624B\u3055\u3093\u3001\u304B\u308F\u3044\u3059\u304E\u308B\u2026\u2026\uFF01\uFF09"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\u300C\u305D\u3001\u305D\u308C\u3058\u3083\u3001\u3044\u3053\u3063\u304B\u2026\u2026\u300D"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u2026\u2026\u3046\u3093\u300D"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\uFF08\u2026\u2026\u4ECA\u306E\u4F1A\u8A71\uFF09"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    - id: 
+      speaker: "\u81EA\u5206"
+      text: "\uFF08\u3059\u3063\u3052\u3047\u30AB\u30C3\u30D7\u30EB\u3063\u307D\u304B\u3063\u305F\u306A\u2026\u2026\uFF09"
+      portraitPrefab: {fileID: 553585874017799889, guid: 8d874c38e38e4684a90347ddf50a8d22, type: 3}
+    loveChange: 0
+    hpChange: 0
+    setFlags: []
+    nextScene: {fileID: 0}
+    nextTalk: {fileID: 0}
+  - memo: 
+    conditions:
+    - type: 1
+      part: 5
+      seconds: 2
+      count: 0
+      order: 
+      flag: {fileID: 0}
+      value: 0
+    lines:
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u3042\u3063\u3001\u6C17\u304C\u3064\u304D\u307E\u3057\u305F\uFF1F\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u3053\u308C\u3001\u79C1\u306E\u63A8\u3057\u306E\u30EC\u30B0\u30CE\u304F\u3093\u306E\u30A2\u30AF\u30AD\u30FC\u3067\u3059\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u304A\u5B88\u308A\u3068\u3057\u3066\u3001\u3082\u3063\u3066\u304A\u3044\u305F\u3089\u3044\u3044\u30B3\u30C8\u3042\u308B\u304B\u306A\u3063\u3066\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u306F\u3044\u3063\uFF01\u3000\u305D\u308C\u306B\u3001\u30EC\u30B0\u30CE\u304F\u3093\u306E\u80FD\u529B\u306F\u2015\u2015|\u5BE9\u8150\u773C\u300A\u30A2\u30D6\u30BD\u30EA\u30E5\u30FC\u30C8\u30FB\u30B8\u30E3\u30C3\u30B8\u300B\uFF01\u3000\u771F\u5B9F\u3092\u898B\u6975\u3081\u308B\u80FD\u529B\u3067\u3059\uFF01\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u30EC\u30B0\u30CE\u304F\u3093\u306E\u80FD\u529B\u304C\u3042\u308C\u3070\u3001\u3042\u305F\u308A\u306E\u62BD\u9078\u6A29\u3092\u5F15\u304F\u306E\u3060\u3063\u3066\u304A\u8336\u306E\u5B50\u3055\u3044\u3055\u3044\uFF01\u300D"
+      portraitPrefab: {fileID: 0}
+    - id: 
+      speaker: "\u6587\u82B1"
+      text: "\u300C\u2026\u2026\u306A\u306F\u305A\u3067\u3059\u300D"
+      portraitPrefab: {fileID: 0}
+    loveChange: 0
+    hpChange: 0
+    setFlags: []
+    nextScene: {fileID: 0}
+    nextTalk: {fileID: 11400000, guid: f275c5f955fe0c941999fd21e8700554, type: 2}
